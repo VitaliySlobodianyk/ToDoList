@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>ToDo App</h1>
+    </header>
+    <main>
+        <div class="search">
+            <input type="text" id="titleSearch" placeholder="SearchByTitle">
+            <label class="select"><h3>Status</h3>
+                <select name="status" id="statusSearch">
+                    <option value="all" selected> All</option>
+                    <option value="open"> Open</option>
+                    <option value="done"> Done</option>
+                </select>
+            </label>
+
+            <label class="select"> <h3>Priority</h3>
+            <select name="priority" id="prioritySearch">
+                <option value="all" selected> All</option>
+                <option value="2"> High</option>
+                <option value="1"> Normal</option>
+                <option value="0"> Low </option>
+            </select>
+           </label>
+            <button id="createBut">Create</button>
+        </div>
+        <div class="todos">
+
+        </div>
+        <div class="modal" id="modal">
+            <div class="edit ">
+                <label>
+                    <h3>Title</h3>
+                    <input type="text" name="title" id="edit__title">
+                 </label>
+                <label>
+                    <h3>Description</h3>
+                   <textarea name="description" id="edit__description" cols="30" rows="4">
+
+                   </textarea>
+                 </label>
+                <label>
+                    <h3>Priority</h3>
+                    <select name="priority" id="edit__priority">
+                        <option value="2"> High</option>
+                        <option value="1" selected> Normal</option>
+                        <option value="0"> Low </option>
+                    </select>
+                 </label>
+                <div class="buttons">
+                    <button id="edit__cancel">Cancel</button>
+                    <button id="edit__save">Save</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p class=" col-4">2019 Vitalii Slobodianyk &copy;</p>
+    </footer>
+
+
+
+    <template>
+        <div class="card">
+            <h2 class="title"> </h2>
+            <p class="description"></p>
+            <p class="priority"></p>
+
+            <div class="actions">
+                <div class="button">
+                    ...
+                </div>
+
+            </div>
+            <option selected disabled hidden>...</option>
+            <option value="done"> Done</option>
+            <option value="edit"> Edit</option>
+            </select>
+        </div>
+    </template>
+
+</body>
+
+</html>

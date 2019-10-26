@@ -1,0 +1,64 @@
+{
+    "name": "todolist",
+    "version": "0.0.1",
+    "description": "Simple to do  list",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config ./build/webpack.build.conf.js",
+        "serve": "webpack-dev-server --open --config ./build/webpack.dev.conf.js"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 3 version"
+    ],
+    "keywords": [
+        "todolist",
+        "list",
+        "planning",
+        "time",
+        "management"
+    ],
+    "author": "Vitalii Slobodianyk",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "@typescript-eslint/eslint-plugin": "^2.5.0",
+        "@typescript-eslint/parser": "^2.5.0",
+        "autoprefixer": "^9.6.5",
+        "babel": "^6.23.0",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^8.0.6",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^3.2.0",
+        "css-mqpacker": "^7.0.0",
+        "cssnano": "^4.1.10",
+        "eslint": "6.1.0",
+        "eslint-config-airbnb": "18.0.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-loader": "^3.0.2",
+        "eslint-plugin-import": "2.18.2",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-react": "7.14.3",
+        "eslint-plugin-react-hooks": "1.7.0",
+        "html-webpack-plugin": "^3.2.0",
+        "http-proxy-middleware": "^0.20.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.12.0",
+        "postcss-loader": "^3.0.0",
+        "prettier": "^1.18.2",
+        "sass": "^1.23.1",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.0.0",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.6.4",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.9.0",
+        "webpack-merge": "^4.2.2"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1"
+    }
+}

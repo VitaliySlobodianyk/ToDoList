@@ -1,0 +1,24 @@
+.card .functions {
+    display: none;
+}
+
+.actions:hover>.functions {
+    display: block;
+}
+
+.card.done {
+    background-color: lightgrey;
+}
+
+.card.done::after {
+    content: '\2713';
+    position: absolute;
+    left: 97%;
+    top: -15%;
+    font-size: 25px;
+    background-color: #fff;
+    color: red;
+    border: 1px solid black;
+    padding: 3px;
+    line-height: 15px;
+}
