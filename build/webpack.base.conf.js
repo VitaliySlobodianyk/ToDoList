@@ -30,7 +30,7 @@ module.exports = {
     output: {
         filename: `${PATHS.js}/[name].js`,
         path: PATHS.dist,
-        publicPath: '/',
+        publicPath: './',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
