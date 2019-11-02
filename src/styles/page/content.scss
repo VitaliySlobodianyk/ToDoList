@@ -1,6 +1,8 @@
+@import "../vars.scss";
 main {
     display: flex;
     flex-direction: column;
     position: relative;
     min-height: 700px;
+    background-color: lighten($color: $primary-color, $amount: 32%);
 }

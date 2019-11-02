@@ -1,32 +1,31 @@
+@import "../mixins.scss";
 .edit {
-    width: 30%;
-    background-color: lightblue;
-    position: relative;
-    left: 35%;
-    top: 10%;
-    padding: 2% 2%;
     display: flex;
     flex-direction: column;
-    h3 {
-        font-size: 15px;
-    }
-    .buttons {
-        margin-top: 10%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        button {
-            width: 35%;
-            border-radius: 10%/50%;
-        }
-    }
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    label,
     input,
     textarea,
     select {
         width: 100%;
     }
+    select {
+        padding-left: 10%;
+        height: 20%;
+    }
+    h3 {
+        font-size: rem(25);
+    }
 }
 
-#edit__priority {
-    padding-left: 5%;
+.modal-footer {
+    .buttons {
+        width: 50%;
+        text-align: right;
+        .btn {
+            margin-left: 7%;
+        }
+    }
 }

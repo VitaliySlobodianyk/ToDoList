@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="./styles/vendors.css" rel="stylesheet">
-    <link href="./styles/app.css" rel="stylesheet">
-</head>
+<link href="./styles/vendors.css" rel="stylesheet"><link href="./styles/app.css" rel="stylesheet"></head>
 
 <body>
     <header>
@@ -16,58 +14,98 @@
     </header>
     <main>
         <div class="search">
-            <input type="text" id="titleSearch" placeholder="SearchByTitle">
-            <label class="select"><h3>Status</h3>
-                <select name="status" id="statusSearch">
-                    <option value="all" selected> All</option>
-                    <option value="open"> Open</option>
-                    <option value="done"> Done</option>
-                </select>
-            </label>
+            <nav class="navbar navbar-expand-md navbar-light ">
 
-            <label class="select"> <h3>Priority</h3>
-            <select name="priority" id="prioritySearch">
-                <option value="all" selected> All</option>
-                <option value="2"> High</option>
-                <option value="1"> Normal</option>
-                <option value="0"> Low </option>
-            </select>
-           </label>
-            <button id="createBut">Create</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <p>Options</p>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav">
+                        <input type="text" id="titleSearch" placeholder="SearchByTitle" class="form-control search__input nav-item">
+
+                        <label class="select nav-item">
+                                <h3>Status</h3>
+                                <select name="status" id="statusSearch" class="form-control">
+                                    <option value="all" selected> All</option>
+                                    <option value="open"> Open</option>
+                                    <option value="done"> Done</option>
+                                </select>
+                            </label>
+
+                        <label class="select nav-item">
+                            <h3>Priority</h3>
+                            <select name="priority" id="prioritySearch" class="form-control">
+                                <option value="all" selected> All</option>
+                                <option value="2"> High</option>
+                                <option value="1"> Normal</option>
+                                <option value="0"> Low </option>
+                            </select>
+                        </label>
+
+                        <button class="btn btn-primary nav-item" id="createBut">Create</button>
+
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+
         </div>
         <div class="todos">
 
         </div>
-        <div class="modal" id="modal">
-            <div class="edit ">
-                <label>
-                    <h3>Title</h3>
-                    <input type="text" name="title" id="edit__title">
-                 </label>
-                <label>
-                    <h3>Description</h3>
-                   <textarea name="description" id="edit__description" cols="30" rows="4">
+        <div class="modal" tabindex="-1" role="dialog " id="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Modal title</h5>
+                        <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="edit ">
+                            <label>
+                                <h3>Title</h3>
+                                <input type="text" name="title" id="edit__title" class="form-control">
+                            </label>
+                            <label>
+                                <h3>Description</h3>
+                                <textarea name="description" id="edit__description" class="form-control" cols="30"
+                                    rows="4">
 
-                   </textarea>
-                 </label>
-                <label>
-                    <h3>Priority</h3>
-                    <select name="priority" id="edit__priority">
-                        <option value="2"> High</option>
-                        <option value="1" selected> Normal</option>
-                        <option value="0"> Low </option>
-                    </select>
-                 </label>
-                <div class="buttons">
-                    <button id="edit__cancel">Cancel</button>
-                    <button id="edit__save">Save</button>
+                               </textarea>
+                            </label>
+                            <label>
+                                <h3>Priority</h3>
+                                <select name="priority" id="edit__priority" class="form-control">
+                                    <option value="0" class="text-primary"> Low </option>
+                                    <option value="1" class="text-success" selected> Normal</option>
+                                    <option value="2" class="text-danger"> High</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="buttons">
+                            <button id="edit__cancel" class="btn btn-danger">Cancel</button>
+                            <button id="edit__save" class="btn btn-success">Save</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+
+
     </main>
     <footer>
-        <p class=" col-4">2019 Vitalii Slobodianyk &copy;</p>
+        <p class=" col-4-bg col-6-sm">2019 Vitalii Slobodianyk &copy;</p>
     </footer>
 
 
@@ -91,8 +129,6 @@
         </div>
     </template>
 
-    <script type="text/javascript" src="./js//vendors.js"></script>
-    <script type="text/javascript" src="./js//app.js"></script>
-</body>
+<script type="text/javascript" src="./js//vendors.js"></script><script type="text/javascript" src="./js//app.js"></script></body>
 
 </html>

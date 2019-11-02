@@ -4,38 +4,22 @@
     width: 28%;
     margin: 2% 2%;
     padding: 2%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     .line--bottom {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        align-content: center;
     }
     .actions {
-        position: relative;
-        width: 20%;
-        display: flex;
-        justify-content: center;
+        font-size: rem(20);
     }
     .priority {
         display: flex;
-        width: 35%;
         justify-content: center;
         align-content: center;
         align-items: center;
-    }
-    .functions {
-        position: absolute;
-        left: -10%;
-        top: 80%;
-        width: 200%;
-        display: flex;
-        flex-direction: column;
-        z-index: 1000;
-        .function {
-            width: 100%;
-        }
+        text-align: left;
+        padding-left: rem(5);
+        font-size: rem(19.5);
     }
 }

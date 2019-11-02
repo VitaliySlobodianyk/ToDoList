@@ -1,5 +1,8 @@
+@import "../vars.scss";
 header {
     font-size: 2wv;
-    border-bottom: 2px solid blue;
+    background: linear-gradient(45deg, $header-color2, $header-color1);
     padding: 3% 4%;
+    color: $secondaryFontColor;
+    text-shadow: 2px 2px 7px black;
 }

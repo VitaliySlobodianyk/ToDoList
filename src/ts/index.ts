@@ -1,3 +1,4 @@
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
  import {State} from "./interfaces";
