@@ -10,16 +10,11 @@
         display: flex;
         justify-content: space-between;
     }
-    .actions {
-        font-size: rem(20);
-    }
     .priority {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-content: center;
         align-items: center;
-        text-align: left;
         padding-left: rem(5);
-        font-size: rem(19.5);
     }
 }
