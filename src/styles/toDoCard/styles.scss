@@ -1,5 +1,7 @@
 @import "../mixins.scss";
+@import "../vars.scss";
 .card {
+    background-color: $border-lighter;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     .title {
         font-size: rem(30);
