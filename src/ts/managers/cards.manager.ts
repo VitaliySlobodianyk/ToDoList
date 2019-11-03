@@ -16,7 +16,7 @@ export class CardsManager {
     }
     static filterByPriority(cards: Card[], priority: string) {
         if (priority == 'all') {
-            return cards;
+            return cards.sort((card1,card2) => Number(card1.priority) - Number(card2.priority));
         } else {
             return cards.filter((card, index) => Number(card.priority) === Number(priority));
         }
@@ -41,5 +41,15 @@ export class CardsManager {
     }
     static searchWithExactTitle(cards: Card[], title:string):boolean{
         return cards.findIndex(card => card.title.toLowerCase().trim() === title.toLowerCase().trim())!== -1;
+    }
+    static searchWithExactTitleNotYorself(cards: Card[], title: string, id:number){
+     let card = cards.find(card => card.title.toLowerCase().trim() === title.toLowerCase().trim());
+    if(card){
+        return card.id !== id;
+    }else{
+        return false;
+    }
+    
+   
     }
 }

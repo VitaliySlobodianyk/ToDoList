@@ -1,6 +1,7 @@
 import { Store } from "./store.module";
 import { userActions } from "../actions";
 import { CardsManager } from "../managers/cards.manager";
+import { State } from "../interfaces";
 
 export class Form {
 
@@ -28,6 +29,7 @@ export class Form {
         let data: any = this.store.GetStore();
         if (data.editActive) {
             this.modalWindow.style.display = 'block';
+            this.title.focus();
             if (data.cardIDToEdit != -1) {
                 this.modeHeader.textContent = "Edit Card";
                 let card = CardsManager.findByID(data.todos, data.cardIDToEdit);
@@ -53,26 +55,31 @@ export class Form {
         this.store.Dispatch(userActions.hide_EDIT());
         this.clearFields();
     }
+
     private save() {
         let data = this.store.GetStore();
+        console.log(this.title.value.trim());
+       
+       
         if (data.cardIDToEdit === -1) {
-            if (!CardsManager.searchWithExactTitle(this.store.GetStore().todos, this.title.value)) {
+            if (CardsManager.searchWithExactTitle(data.todos, this.title.value)) {
+                this.warning("Card with such title already exists!", data);
+            } else if (this.title.value.trim()==='') {
+                this.warning("You can't save card without title!", data);
+            } else {
                 this.saver();
                 this.clearFields();
             }
-            else {
-                this.exists();
-                setTimeout(() => {
-                    this.mode(data);
-                }, 3000)
-            }
         } else {
-            this.saver();
-            this.clearFields();
+            if(CardsManager.searchWithExactTitleNotYorself(data.todos, this.title.value, data.cardIDToEdit)){
+                this.warning("Cards can't be duplicated!", data);              
+            }else if (this.title.value.trim()==='') {
+                this.warning("You can't leave card wihout title!", data);
+            }else{
+                this.saver();
+                this.clearFields();
+            }      
         }
-
-
-
     }
     private saver() {
         this.store.Dispatch(userActions.save_Card({
@@ -81,11 +88,17 @@ export class Form {
             priority: this.priority.options[this.priority.selectedIndex].value
         }));
     }
-    private exists() {
-        this.modeHeader.textContent = "Card with  such title  already exists!";
+
+    private warning(msg: string, data: State): void {
+        this.modeHeader.textContent = msg;
         this.modeHeader.classList.add('text-danger');
-    }
-    private mode(data) {
+        this.modeHeader.focus();
+        setTimeout(() => {
+            this.mode(data);
+        }, 3000)
+    } 
+
+    private mode(data: State): void {
         if (data.cardIDToEdit !== -1) {
             this.modeHeader.textContent = "Edit Card";
         } else {

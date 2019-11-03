@@ -3,6 +3,6 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height: 700px;
+    min-height: 100vh;
     background-color: lighten($color: $primary-color, $amount: 32%);
 }
