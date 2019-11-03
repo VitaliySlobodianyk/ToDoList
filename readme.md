@@ -1,15 +1,15 @@
-Simple ToDo App by Vitalii Slobodianyk.
+<h2>Simple ToDo App by Vitalii Slobodianyk.</h2>
 
-Main features :
-    - Priority of todo cards.
+<h3>Main features : </h3>
+  <ul>  - Priority of todo cards.
     - Possibility to edit cards.
     - Possibility to searc cards  by  title, status and priority.
     - Responsive design.
-    - Used Local Storage of your browser to store todos.
+    - Used Local Storage of your browser to store todos. <ul>
 
 Usage:
     - To create todo:
-        1) Hit create button
+        1) Hit create button </br>
         2) Enter title of your todo
         3) Enter description of todo (optional) 
         4) Hit save button, and your todo will be displayed on main page
